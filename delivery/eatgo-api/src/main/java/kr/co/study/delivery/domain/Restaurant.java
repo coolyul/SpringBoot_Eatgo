@@ -1,22 +1,43 @@
 package kr.co.study.delivery.domain;
 
-import com.fasterxml.jackson.databind.node.ArrayNode;
-
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.Transient;
 import java.util.ArrayList;
 import java.util.List;
 
+@Entity
 public class Restaurant {
 
-    private final String name;
-    private final String address;
-    private final Long id;
+    @Id
+    @GeneratedValue
+    private Long id;
+
+    private String name;
+
+    private String address;
+
+    @Transient      // 이건 db에 저장하는 처리를 하지 않음. 임시로 처리하는거다
     private List<MenuItem> menuItems = new ArrayList<>();
+
+    public Restaurant() {
+    }
+
+    public Restaurant(String name, String address) {
+        this.name = name;
+        this.address = address;
+    }
 
     public Restaurant(Long id, String name, String address){
 
         this.id = id;
         this.name = name;
         this.address = address;
+    }
+
+    public void setId(long id) {
+        this.id = id;
     }
 
     public Long getId() {

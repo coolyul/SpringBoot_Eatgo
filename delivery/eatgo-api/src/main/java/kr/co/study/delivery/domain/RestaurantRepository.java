@@ -1,11 +1,17 @@
 package kr.co.study.delivery.domain;
 
-import java.util.List;
+import org.springframework.data.repository.CrudRepository;
 
-public interface RestaurantRepository {
+import java.util.List;
+import java.util.Optional;
+
+public interface RestaurantRepository extends CrudRepository<Restaurant, Long> {
     // 레스토랑 전체검색
     List<Restaurant> findAll();
 
-    // 레스토랑 ID로 검색
-    Restaurant findById(Long id);
+    // 레스토랑 ID로 검색.
+    Optional<Restaurant> findById(Long id);
+
+    Restaurant save(Restaurant restaurant);
+
 }

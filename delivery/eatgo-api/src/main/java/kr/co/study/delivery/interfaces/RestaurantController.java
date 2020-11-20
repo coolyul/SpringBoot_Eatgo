@@ -6,12 +6,14 @@ import kr.co.study.delivery.domain.MenuItemRepository;
 import kr.co.study.delivery.domain.Restaurant;
 import kr.co.study.delivery.domain.RestaurantRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
 
+import java.net.URI;
+import java.net.URISyntaxException;
 import java.util.List;
 
+@CrossOrigin
 @RestController
 public class RestaurantController {         // interfaces는 사용자 화면에 보여질 내용을 만드는 패키지!
 
@@ -41,6 +43,21 @@ public class RestaurantController {         // interfaces는 사용자 화면에
 //        restaurant.setMenuItem(menuItems);
 
         return restaurant;
+    }
+
+
+
+    @PostMapping("/restaurants")
+    public ResponseEntity create(@RequestBody Restaurant resource) throws URISyntaxException {         // created됐는지 201번 돌려주기위해 response~~
+
+        String name = resource.getName();
+        String address = resource.getAddress();
+
+        Restaurant restaurant = new Restaurant(name, address);
+        restaurantService.addRestaurant(restaurant);
+
+        URI location = new URI("/restaurants/" + restaurant.getId());        // 추가되는 위치
+        return ResponseEntity.created(location).body("{}");
     }
 
 }
