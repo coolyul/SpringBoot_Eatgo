@@ -3,11 +3,17 @@ package kr.co.study.delivery.application;
 import kr.co.study.delivery.domain.*;
 import org.junit.Before;
 import org.junit.Test;
+<<<<<<< HEAD
 import org.junit.runner.RunWith;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
+=======
+import org.mockito.Mock;
+import org.mockito.MockitoAnnotations;
+import org.springframework.boot.test.context.SpringBootTest;
+>>>>>>> 08493a3b07dcd63338889df4f5168ef4621dbce5
 
 import java.util.ArrayList;
 import java.util.List;
@@ -20,7 +26,10 @@ import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.BDDMockito.given;
 
 @SpringBootTest
+<<<<<<< HEAD
 @RunWith(SpringRunner.class)
+=======
+>>>>>>> 08493a3b07dcd63338889df4f5168ef4621dbce5
 public class RestaurantServiceTest {
 
     private RestaurantService restaurantService;
@@ -59,6 +68,10 @@ public class RestaurantServiceTest {
         given(restaurantRepository.findAll()).willReturn(restaurants);
         given(restaurantRepository.findById(1004L)).willReturn(Optional.of(restaurant));
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 08493a3b07dcd63338889df4f5168ef4621dbce5
     }
 
 

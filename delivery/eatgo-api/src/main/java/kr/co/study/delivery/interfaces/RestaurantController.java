@@ -13,7 +13,10 @@ import java.net.URI;
 import java.net.URISyntaxException;
 import java.util.List;
 
+<<<<<<< HEAD
 @CrossOrigin
+=======
+>>>>>>> 08493a3b07dcd63338889df4f5168ef4621dbce5
 @RestController
 public class RestaurantController {         // interfaces는 사용자 화면에 보여질 내용을 만드는 패키지!
 

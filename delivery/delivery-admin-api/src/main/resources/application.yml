@@ -1,0 +1,6 @@
+spring:
+  datasource:
+    url: jdbc:h2:C:\Users\Yuri\Desktop\delivery\delivery;AUTO_SERVER=TRUE
+  jpa:
+    hibernate:
+      ddl-auto: update

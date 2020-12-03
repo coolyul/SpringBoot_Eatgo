@@ -1,3 +1,8 @@
 rootProject.name = 'delivery'
 
-include 'eatgo-api'
+include 'delivery-common'
+include 'delivery-admin-api'
+include 'delivery-customer-api'
+include 'delivery-login-api'
+include 'delivery-restaurant-api'
+
