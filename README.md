@@ -9,7 +9,7 @@
 Back-end 부분의 구현 코드만 포함이 되어 있으며, 
 Front-end 부분을 함께 구현하면 보일 부분을 스크린샷으로 첨부합니다.
 
-## Technologies
+# Technologies
 
 * Java
 * SpringBoot
@@ -20,9 +20,9 @@ Front-end 부분을 함께 구현하면 보일 부분을 스크린샷으로 첨�
 * Git
 
 
-## Features
+# Features
 
-### 1. Delivery-Admin-Api
+## 1. Delivery-Admin-Api
 
  * 관리자 Api
  
@@ -66,7 +66,7 @@ Front-end 부분을 함께 구현하면 보일 부분을 스크린샷으로 첨�
        
    
 
-### 2. Delivery-Customer-Api
+## 2. Delivery-Customer-Api
 
 * 고객 사용 Api
 
@@ -91,7 +91,7 @@ Front-end 부분을 함께 구현하면 보일 부분을 스크린샷으로 첨�
 
         
 
-### 3. Delivery-Restaurant-Api
+## 3. Delivery-Restaurant-Api
 
  * 가게 주인의 예약 확인
  
@@ -102,7 +102,7 @@ Front-end 부분을 함께 구현하면 보일 부분을 스크린샷으로 첨�
     
     
 
-### 4. Delivery-Login-Api
+## 4. Delivery-Login-Api
 
  * UserService
  
